@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <success>Always</success>
+    <xpath />
+    <match Class="PatchOperationSequence">
+      <operations>
+        <!-- Leather -->
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs</xpath>
+          <value />
+        </li>
+        <!-- Animal thing -->
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs</xpath>
+          <value />
+        </li>
+        <!-- PawnKind -->
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs</xpath>
+          <value />
+        </li>
+        <!-- Egg -->
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs</xpath>
+          <value />
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

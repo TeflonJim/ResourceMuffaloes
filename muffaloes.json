@@ -1,0 +1,220 @@
+{
+    "Gold": {
+        "colour": "(193,145,79)",
+        "milkAmount": 5,
+        "woolAmount": 50,
+        "modifiers": {
+            "LeatherMaxHitPoint": 1,
+            "Mass": 1,
+            "MarketValue": 1,
+            "ArmorSharp": 1,
+            "ArmorBlunt": 1,
+            "ArmorHeat": 1,
+            "InsulationCold": 1,
+            "InsulationHeat": 1
+        }
+    },
+    "Granite": {
+        "colour": "(105,95,97)",
+        "milkAmount": 3,
+        "woolAmount": 10,
+        "DefNamePrefix": "Blocks",
+        "modifiers": {
+            "LeatherMaxHitPoint": 1,
+            "Mass": 1,
+            "MarketValue": 1,
+            "ArmorSharp": 1,
+            "ArmorBlunt": 1,
+            "ArmorHeat": 1,
+            "InsulationCold": 1,
+            "InsulationHeat": 1
+        }
+    },
+    "Jade": {
+        "colour": "(50,118,39)",
+        "milkAmount": 5,
+        "woolAmount": 50,
+        "modifiers": {
+            "LeatherMaxHitPoint": 1,
+            "Mass": 1,
+            "MarketValue": 1,
+            "ArmorSharp": 1,
+            "ArmorBlunt": 1,
+            "ArmorHeat": 1,
+            "InsulationCold": 1,
+            "InsulationHeat": 1
+        }
+    },
+    "Limestone": {
+        "colour": "(158,153,135)",
+        "milkAmount": 3,
+        "woolAmount": 10,
+        "DefNamePrefix": "Blocks",
+        "modifiers": {
+            "LeatherMaxHitPoint": 1,
+            "Mass": 1,
+            "MarketValue": 1,
+            "ArmorSharp": 1,
+            "ArmorBlunt": 1,
+            "ArmorHeat": 1,
+            "InsulationCold": 1,
+            "InsulationHeat": 1
+        }
+    },
+    "Marble": {
+        "colour": "(132,135,132)",
+        "milkAmount": 3,
+        "woolAmount": 10,
+        "DefNamePrefix": "Blocks",
+        "modifiers": {
+            "LeatherMaxHitPoint": 1,
+            "Mass": 1,
+            "MarketValue": 1,
+            "ArmorSharp": 1,
+            "ArmorBlunt": 1,
+            "ArmorHeat": 1,
+            "InsulationCold": 1,
+            "InsulationHeat": 1
+        }
+    },
+    "Plasteel": {
+        "colour": "(108,120,138)",
+        "milkAmount": 5,
+        "woolAmount": 50,
+        "modifiers": {
+            "LeatherMaxHitPoint": 1,
+            "Mass": 1,
+            "MarketValue": 1,
+            "ArmorSharp": 1,
+            "ArmorBlunt": 1,
+            "ArmorHeat": 1,
+            "InsulationCold": 1,
+            "InsulationHeat": 1
+        }
+    },
+    "Sandstone": {
+        "colour": "(126,104,94)",
+        "milkAmount": 3,
+        "woolAmount": 10,
+        "DefNamePrefix": "Blocks",
+        "modifiers": {
+            "LeatherMaxHitPoint": 1,
+            "Mass": 1,
+            "MarketValue": 1,
+            "ArmorSharp": 1,
+            "ArmorBlunt": 1,
+            "ArmorHeat": 1,
+            "InsulationCold": 1,
+            "InsulationHeat": 1
+        }
+    },
+    "Silver": {
+        "colour": "(167,167,167)",
+        "milkAmount": 20,
+        "woolAmount": 150,
+        "modifiers": {
+            "LeatherMaxHitPoint": 1,
+            "Mass": 1,
+            "MarketValue": 1,
+            "ArmorSharp": 1,
+            "ArmorBlunt": 1,
+            "ArmorHeat": 1,
+            "InsulationCold": 1,
+            "InsulationHeat": 1
+        }
+    },
+    "Slate": {
+        "colour": "(70,70,70)",
+        "milkAmount": 3,
+        "woolAmount": 10,
+        "DefNamePrefix": "Blocks",
+        "modifiers": {
+            "LeatherMaxHitPoint": 1,
+            "Mass": 1,
+            "MarketValue": 1,
+            "ArmorSharp": 1,
+            "ArmorBlunt": 1,
+            "ArmorHeat": 1,
+            "InsulationCold": 1,
+            "InsulationHeat": 1
+        }
+    },
+    "Steel": {
+        "colour": "(169,169,169)",
+        "milkAmount": 30,
+        "woolAmount": 200,
+        "modifiers": {
+            "LeatherMaxHitPoint": 1,
+            "Mass": 1,
+            "MarketValue": 1,
+            "ArmorSharp": 1,
+            "ArmorBlunt": 1,
+            "ArmorHeat": 1,
+            "InsulationCold": 1,
+            "InsulationHeat": 1
+        }
+    },
+    "Uranium": {
+        "colour": "(96,96,96)",
+        "milkAmount": 5,
+        "woolAmount": 50,
+        "modifiers": {
+            "LeatherMaxHitPoint": 1,
+            "Mass": 1,
+            "MarketValue": 1,
+            "ArmorSharp": 1,
+            "ArmorBlunt": 1,
+            "ArmorHeat": 1,
+            "InsulationCold": 1,
+            "InsulationHeat": 1
+        }
+    },
+    "Titanium": {
+        "colour": "(255,255,255)",
+        "milkAmount": 5,
+        "woolAmount": 50,
+        "isPatch": true,
+        "modifiers": {
+            "LeatherMaxHitPoint": 1,
+            "Mass": 1,
+            "MarketValue": 1,
+            "ArmorSharp": 1,
+            "ArmorBlunt": 1,
+            "ArmorHeat": 1,
+            "InsulationCold": 1,
+            "InsulationHeat": 1
+        }
+    },
+    "Copper": {
+        "colour": "(254,156,103)",
+        "milkAmount": 5,
+        "woolAmount": 50,
+        "isPatch": true,
+        "modifiers": {
+            "LeatherMaxHitPoint": 1,
+            "Mass": 1,
+            "MarketValue": 1,
+            "ArmorSharp": 1,
+            "ArmorBlunt": 1,
+            "ArmorHeat": 1,
+            "InsulationCold": 1,
+            "InsulationHeat": 1
+        }
+    },
+    "Tin": {
+        "colour": "(190,192,189)",
+        "milkAmount": 5,
+        "woolAmount": 50,
+        "isPatch": true,
+        "modifiers": {
+            "LeatherMaxHitPoint": 1,
+            "Mass": 1,
+            "MarketValue": 1,
+            "ArmorSharp": 1,
+            "ArmorBlunt": 1,
+            "ArmorHeat": 1,
+            "InsulationCold": 1,
+            "InsulationHeat": 1
+        }
+    }
+}

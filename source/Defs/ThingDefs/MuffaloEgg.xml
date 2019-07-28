@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef Name="MuffaloEggBase" ParentName="EggFertBase" Abstract="True">
+    <ingestible>
+      <preferability>NeverForNutrition</preferability>
+    </ingestible>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <drawSize>1.8</drawSize>
+    </graphicData>
+    <statBases>
+      <WorkToMake>2000</WorkToMake>
+      <MarketValue>1000</MarketValue>
+    </statBases>
+    <recipeMaker>
+      <skillRequirements>
+        <Medicine>15</Medicine>
+      </skillRequirements>
+      <researchPrerequisite>MuffaloMutation</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>EggLab</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+  <ThingDef ParentName="MuffaloEggBase">
+    <defName>Egg{0}MuffaloFertilized</defName>
+    <label>{0} muffalo egg (fert.)</label>
+    <description>An fertilized egg containing a {1} breed of muffalo.</description>
+    <graphicData>
+      <color>{2}</color>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>1</hatcherDaystoHatch>
+        <hatcherPawn>{0}Muffalo</hatcherPawn>
+      </li>
+    </comps>
+    <costList>
+      <WoolMuffalo>100</WoolMuffalo>
+      <MedicineUltratech>5</MedicineUltratech>
+    </costList>
+  </ThingDef>
+</Defs>

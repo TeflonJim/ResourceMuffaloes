@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+    <name>Resource Muffaloes</name>
+    <author>TeflonJim</author>
+    <supportedVersions>
+        <li>1.0</li>
+    </supportedVersions>
+    <description>Adds muffaloes that shed resources (Steel, Plasteel, Gold, Jade, Uranium, Stone chunks and Silver).
+
+Muffalo Mutation must be researched before creating these genetically engineered Muffaloes.
+
+This version of Resource Muffaloes is derived from Sahothron's original work, found here:
+
+https://steamcommunity.com/sharedfiles/filedetails/?id=1225625568
+
+All cost lists have been modified.
+    </description>
+</ModMetaData>
