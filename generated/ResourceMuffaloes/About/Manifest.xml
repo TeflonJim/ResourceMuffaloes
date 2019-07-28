@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Manifest>
   <identifier>Resource Muffaloes</identifier>
-  <version>0.0.1</version>
+  <version>1.0.0</version>
   <manifestUri>https://github.com/TeflonJim/ResourceMuffaloes/blob/master/source/About/Manifest.xml</manifestUri>
   <downloadUri>https://github.com/TeflonJim/ResourceMuffaloes/releases/latest</downloadUri>
 </Manifest>

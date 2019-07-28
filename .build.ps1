@@ -47,7 +47,7 @@ task Setup {
     }
     $path = Join-Path $psscriptroot 'source\About\Manifest.xml'
     $xDocument = [System.Xml.Linq.XDocument]::Load($path)
-    $buildInfo.Version = $xDocument.Element('Manifest').Element('version').Value
+    $buildInfo.Version = [Version]$xDocument.Element('Manifest').Element('version').Value
 }
 
 task Clean {
