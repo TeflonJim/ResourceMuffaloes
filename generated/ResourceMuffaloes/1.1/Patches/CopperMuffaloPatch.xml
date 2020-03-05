@@ -29,6 +29,9 @@
               <stuffProps>
                 <color>(254,156,103)</color>
                 <commonality>0.005</commonality>
+                <statFactors>
+                  <Beauty>1.3</Beauty>
+                </statFactors>
               </stuffProps>
             </ThingDef>
           </value>
@@ -47,6 +50,7 @@
                 <ComfyTemperatureMin>-55</ComfyTemperatureMin>
                 <ComfyTemperatureMax>45</ComfyTemperatureMax>
               </statBases>
+              <uiIconScale>1.35</uiIconScale>
               <tools>
                 <li>
                   <label>head</label>
@@ -89,15 +93,10 @@
                 </li>
               </tools>
               <comps>
-                <li Class="CompProperties_Milkable">
-                  <milkDef>Milk</milkDef>
-                  <milkIntervalDays>2</milkIntervalDays>
-                  <milkAmount>5</milkAmount>
-                </li>
                 <li Class="CompProperties_Shearable">
-                  <woolDef>WoolMuffalo</woolDef>
+                  <woolDef>Copper</woolDef>
                   <shearIntervalDays>25</shearIntervalDays>
-                  <woolAmount>100</woolAmount>
+                  <woolAmount>50</woolAmount>
                 </li>
               </comps>
               <race>
@@ -152,10 +151,7 @@
               <race>Muffalo</race>
               <combatPower>100</combatPower>
               <ecoSystemWeight>1.1</ecoSystemWeight>
-              <wildGroupSize>
-                <min>3</min>
-                <max>9</max>
-              </wildGroupSize>
+              <wildGroupSize>3~9</wildGroupSize>
               <lifeStages>
                 <li>
                   <label>Copper muffalo calf</label>

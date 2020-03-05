@@ -10,6 +10,7 @@
       <ComfyTemperatureMin>-55</ComfyTemperatureMin>
       <ComfyTemperatureMax>45</ComfyTemperatureMax>
     </statBases>
+    <uiIconScale>1.35</uiIconScale>
     <tools>
       <li>
         <label>head</label>
@@ -52,15 +53,10 @@
       </li>
     </tools>
     <comps>
-      <li Class="CompProperties_Milkable">
-        <milkDef>Milk</milkDef>
-        <milkIntervalDays>2</milkIntervalDays>
-        <milkAmount>5</milkAmount>
-      </li>
       <li Class="CompProperties_Shearable">
-        <woolDef>WoolMuffalo</woolDef>
+        <woolDef>Gold</woolDef>
         <shearIntervalDays>25</shearIntervalDays>
-        <woolAmount>100</woolAmount>
+        <woolAmount>50</woolAmount>
       </li>
     </comps>
     <race>
@@ -113,6 +109,7 @@
       <ComfyTemperatureMin>-55</ComfyTemperatureMin>
       <ComfyTemperatureMax>45</ComfyTemperatureMax>
     </statBases>
+    <uiIconScale>1.35</uiIconScale>
     <tools>
       <li>
         <label>head</label>
@@ -155,15 +152,10 @@
       </li>
     </tools>
     <comps>
-      <li Class="CompProperties_Milkable">
-        <milkDef>Milk</milkDef>
-        <milkIntervalDays>2</milkIntervalDays>
-        <milkAmount>3</milkAmount>
-      </li>
       <li Class="CompProperties_Shearable">
-        <woolDef>WoolMuffalo</woolDef>
+        <woolDef>BlocksGranite</woolDef>
         <shearIntervalDays>25</shearIntervalDays>
-        <woolAmount>100</woolAmount>
+        <woolAmount>10</woolAmount>
       </li>
     </comps>
     <race>
@@ -216,6 +208,7 @@
       <ComfyTemperatureMin>-55</ComfyTemperatureMin>
       <ComfyTemperatureMax>45</ComfyTemperatureMax>
     </statBases>
+    <uiIconScale>1.35</uiIconScale>
     <tools>
       <li>
         <label>head</label>
@@ -258,15 +251,10 @@
       </li>
     </tools>
     <comps>
-      <li Class="CompProperties_Milkable">
-        <milkDef>Milk</milkDef>
-        <milkIntervalDays>2</milkIntervalDays>
-        <milkAmount>5</milkAmount>
-      </li>
       <li Class="CompProperties_Shearable">
-        <woolDef>WoolMuffalo</woolDef>
+        <woolDef>Jade</woolDef>
         <shearIntervalDays>25</shearIntervalDays>
-        <woolAmount>100</woolAmount>
+        <woolAmount>50</woolAmount>
       </li>
     </comps>
     <race>
@@ -319,6 +307,7 @@
       <ComfyTemperatureMin>-55</ComfyTemperatureMin>
       <ComfyTemperatureMax>45</ComfyTemperatureMax>
     </statBases>
+    <uiIconScale>1.35</uiIconScale>
     <tools>
       <li>
         <label>head</label>
@@ -361,15 +350,10 @@
       </li>
     </tools>
     <comps>
-      <li Class="CompProperties_Milkable">
-        <milkDef>Milk</milkDef>
-        <milkIntervalDays>2</milkIntervalDays>
-        <milkAmount>3</milkAmount>
-      </li>
       <li Class="CompProperties_Shearable">
-        <woolDef>WoolMuffalo</woolDef>
+        <woolDef>BlocksLimestone</woolDef>
         <shearIntervalDays>25</shearIntervalDays>
-        <woolAmount>100</woolAmount>
+        <woolAmount>10</woolAmount>
       </li>
     </comps>
     <race>
@@ -422,6 +406,7 @@
       <ComfyTemperatureMin>-55</ComfyTemperatureMin>
       <ComfyTemperatureMax>45</ComfyTemperatureMax>
     </statBases>
+    <uiIconScale>1.35</uiIconScale>
     <tools>
       <li>
         <label>head</label>
@@ -464,15 +449,10 @@
       </li>
     </tools>
     <comps>
-      <li Class="CompProperties_Milkable">
-        <milkDef>Milk</milkDef>
-        <milkIntervalDays>2</milkIntervalDays>
-        <milkAmount>3</milkAmount>
-      </li>
       <li Class="CompProperties_Shearable">
-        <woolDef>WoolMuffalo</woolDef>
+        <woolDef>BlocksMarble</woolDef>
         <shearIntervalDays>25</shearIntervalDays>
-        <woolAmount>100</woolAmount>
+        <woolAmount>10</woolAmount>
       </li>
     </comps>
     <race>
@@ -525,6 +505,7 @@
       <ComfyTemperatureMin>-55</ComfyTemperatureMin>
       <ComfyTemperatureMax>45</ComfyTemperatureMax>
     </statBases>
+    <uiIconScale>1.35</uiIconScale>
     <tools>
       <li>
         <label>head</label>
@@ -567,15 +548,10 @@
       </li>
     </tools>
     <comps>
-      <li Class="CompProperties_Milkable">
-        <milkDef>Milk</milkDef>
-        <milkIntervalDays>2</milkIntervalDays>
-        <milkAmount>5</milkAmount>
-      </li>
       <li Class="CompProperties_Shearable">
-        <woolDef>WoolMuffalo</woolDef>
+        <woolDef>Plasteel</woolDef>
         <shearIntervalDays>25</shearIntervalDays>
-        <woolAmount>100</woolAmount>
+        <woolAmount>50</woolAmount>
       </li>
     </comps>
     <race>
@@ -628,6 +604,7 @@
       <ComfyTemperatureMin>-55</ComfyTemperatureMin>
       <ComfyTemperatureMax>45</ComfyTemperatureMax>
     </statBases>
+    <uiIconScale>1.35</uiIconScale>
     <tools>
       <li>
         <label>head</label>
@@ -670,15 +647,10 @@
       </li>
     </tools>
     <comps>
-      <li Class="CompProperties_Milkable">
-        <milkDef>Milk</milkDef>
-        <milkIntervalDays>2</milkIntervalDays>
-        <milkAmount>3</milkAmount>
-      </li>
       <li Class="CompProperties_Shearable">
-        <woolDef>WoolMuffalo</woolDef>
+        <woolDef>BlocksSandstone</woolDef>
         <shearIntervalDays>25</shearIntervalDays>
-        <woolAmount>100</woolAmount>
+        <woolAmount>10</woolAmount>
       </li>
     </comps>
     <race>
@@ -731,6 +703,7 @@
       <ComfyTemperatureMin>-55</ComfyTemperatureMin>
       <ComfyTemperatureMax>45</ComfyTemperatureMax>
     </statBases>
+    <uiIconScale>1.35</uiIconScale>
     <tools>
       <li>
         <label>head</label>
@@ -773,15 +746,10 @@
       </li>
     </tools>
     <comps>
-      <li Class="CompProperties_Milkable">
-        <milkDef>Milk</milkDef>
-        <milkIntervalDays>2</milkIntervalDays>
-        <milkAmount>20</milkAmount>
-      </li>
       <li Class="CompProperties_Shearable">
-        <woolDef>WoolMuffalo</woolDef>
+        <woolDef>Silver</woolDef>
         <shearIntervalDays>25</shearIntervalDays>
-        <woolAmount>100</woolAmount>
+        <woolAmount>150</woolAmount>
       </li>
     </comps>
     <race>
@@ -834,6 +802,7 @@
       <ComfyTemperatureMin>-55</ComfyTemperatureMin>
       <ComfyTemperatureMax>45</ComfyTemperatureMax>
     </statBases>
+    <uiIconScale>1.35</uiIconScale>
     <tools>
       <li>
         <label>head</label>
@@ -876,15 +845,10 @@
       </li>
     </tools>
     <comps>
-      <li Class="CompProperties_Milkable">
-        <milkDef>Milk</milkDef>
-        <milkIntervalDays>2</milkIntervalDays>
-        <milkAmount>3</milkAmount>
-      </li>
       <li Class="CompProperties_Shearable">
-        <woolDef>WoolMuffalo</woolDef>
+        <woolDef>BlocksSlate</woolDef>
         <shearIntervalDays>25</shearIntervalDays>
-        <woolAmount>100</woolAmount>
+        <woolAmount>10</woolAmount>
       </li>
     </comps>
     <race>
@@ -937,6 +901,7 @@
       <ComfyTemperatureMin>-55</ComfyTemperatureMin>
       <ComfyTemperatureMax>45</ComfyTemperatureMax>
     </statBases>
+    <uiIconScale>1.35</uiIconScale>
     <tools>
       <li>
         <label>head</label>
@@ -979,15 +944,10 @@
       </li>
     </tools>
     <comps>
-      <li Class="CompProperties_Milkable">
-        <milkDef>Milk</milkDef>
-        <milkIntervalDays>2</milkIntervalDays>
-        <milkAmount>30</milkAmount>
-      </li>
       <li Class="CompProperties_Shearable">
-        <woolDef>WoolMuffalo</woolDef>
+        <woolDef>Steel</woolDef>
         <shearIntervalDays>25</shearIntervalDays>
-        <woolAmount>100</woolAmount>
+        <woolAmount>200</woolAmount>
       </li>
     </comps>
     <race>
@@ -1040,6 +1000,7 @@
       <ComfyTemperatureMin>-55</ComfyTemperatureMin>
       <ComfyTemperatureMax>45</ComfyTemperatureMax>
     </statBases>
+    <uiIconScale>1.35</uiIconScale>
     <tools>
       <li>
         <label>head</label>
@@ -1082,15 +1043,10 @@
       </li>
     </tools>
     <comps>
-      <li Class="CompProperties_Milkable">
-        <milkDef>Milk</milkDef>
-        <milkIntervalDays>2</milkIntervalDays>
-        <milkAmount>5</milkAmount>
-      </li>
       <li Class="CompProperties_Shearable">
-        <woolDef>WoolMuffalo</woolDef>
+        <woolDef>Uranium</woolDef>
         <shearIntervalDays>25</shearIntervalDays>
-        <woolAmount>100</woolAmount>
+        <woolAmount>50</woolAmount>
       </li>
     </comps>
     <race>

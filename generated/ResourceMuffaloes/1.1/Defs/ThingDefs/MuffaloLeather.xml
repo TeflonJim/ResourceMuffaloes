@@ -20,6 +20,9 @@
     <stuffProps>
       <color>(193,145,79)</color>
       <commonality>0.005</commonality>
+      <statFactors>
+        <Beauty>1.3</Beauty>
+      </statFactors>
     </stuffProps>
   </ThingDef>
   <ThingDef ParentName="LeatherBase">
@@ -42,6 +45,9 @@
     <stuffProps>
       <color>(105,95,97)</color>
       <commonality>0.005</commonality>
+      <statFactors>
+        <Beauty>1.3</Beauty>
+      </statFactors>
     </stuffProps>
   </ThingDef>
   <ThingDef ParentName="LeatherBase">
@@ -64,6 +70,9 @@
     <stuffProps>
       <color>(50,118,39)</color>
       <commonality>0.005</commonality>
+      <statFactors>
+        <Beauty>1.3</Beauty>
+      </statFactors>
     </stuffProps>
   </ThingDef>
   <ThingDef ParentName="LeatherBase">
@@ -86,6 +95,9 @@
     <stuffProps>
       <color>(158,153,135)</color>
       <commonality>0.005</commonality>
+      <statFactors>
+        <Beauty>1.3</Beauty>
+      </statFactors>
     </stuffProps>
   </ThingDef>
   <ThingDef ParentName="LeatherBase">
@@ -108,6 +120,9 @@
     <stuffProps>
       <color>(132,135,132)</color>
       <commonality>0.005</commonality>
+      <statFactors>
+        <Beauty>1.3</Beauty>
+      </statFactors>
     </stuffProps>
   </ThingDef>
   <ThingDef ParentName="LeatherBase">
@@ -130,6 +145,9 @@
     <stuffProps>
       <color>(108,120,138)</color>
       <commonality>0.005</commonality>
+      <statFactors>
+        <Beauty>1.3</Beauty>
+      </statFactors>
     </stuffProps>
   </ThingDef>
   <ThingDef ParentName="LeatherBase">
@@ -152,6 +170,9 @@
     <stuffProps>
       <color>(126,104,94)</color>
       <commonality>0.005</commonality>
+      <statFactors>
+        <Beauty>1.3</Beauty>
+      </statFactors>
     </stuffProps>
   </ThingDef>
   <ThingDef ParentName="LeatherBase">
@@ -174,6 +195,9 @@
     <stuffProps>
       <color>(167,167,167)</color>
       <commonality>0.005</commonality>
+      <statFactors>
+        <Beauty>1.3</Beauty>
+      </statFactors>
     </stuffProps>
   </ThingDef>
   <ThingDef ParentName="LeatherBase">
@@ -196,6 +220,9 @@
     <stuffProps>
       <color>(70,70,70)</color>
       <commonality>0.005</commonality>
+      <statFactors>
+        <Beauty>1.3</Beauty>
+      </statFactors>
     </stuffProps>
   </ThingDef>
   <ThingDef ParentName="LeatherBase">
@@ -218,6 +245,9 @@
     <stuffProps>
       <color>(169,169,169)</color>
       <commonality>0.005</commonality>
+      <statFactors>
+        <Beauty>1.3</Beauty>
+      </statFactors>
     </stuffProps>
   </ThingDef>
   <ThingDef ParentName="LeatherBase">
@@ -240,6 +270,9 @@
     <stuffProps>
       <color>(96,96,96)</color>
       <commonality>0.005</commonality>
+      <statFactors>
+        <Beauty>1.3</Beauty>
+      </statFactors>
     </stuffProps>
   </ThingDef>
 </Defs>

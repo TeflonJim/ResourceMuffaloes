@@ -5,18 +5,21 @@ param (
     [String]$ReleaseType = 'Build'
 )
 
-task Build Setup,
-           Clean,
-           CopyFramework,
-           SetPublishedItemID,
-           CreatePatches,
-           UpdateLeatherThingDefs,
-           UpdateAnimalThingDefs,
-           UpdatePawnKindDefs,
-           UpdateItemDefs,
-           UpdateVersion,
-           CreatePackage,
-           UpdateLocal
+task Build @(
+    'Setup'
+    'UpdateLastVersion'
+    'Clean'
+    'CopyFramework'
+    'SetPublishedItemID'
+    'CreatePatches'
+    'UpdateLeatherThingDefs'
+    'UpdateAnimalThingDefs'
+    'UpdatePawnKindDefs'
+    'UpdateItemDefs'
+    'UpdateVersion'
+    'CreatePackage'
+    'UpdateLocal'
+)
 
 filter ConvertTo-OrderedDictionary {
     $dictionary = [Ordered]@{}
@@ -26,18 +29,19 @@ filter ConvertTo-OrderedDictionary {
     $dictionary
 }
 
-
 task Setup {
-    Import-Module Indented.RimWorld -Global
-
     $Global:buildInfo = [PSCustomObject]@{
         Name            = 'ResourceMuffaloes'
-        PublishedFileID = ''
+        PublishedFileID = '1818042854'
         Version         = $null
+        RimWorldVersion = $rwVersion = Get-RWVersion
         Path            = [PSCustomObject]@{
-            Build     = Join-Path $psscriptroot 'build'
-            Generated = Join-Path $psscriptroot 'generated\ResourceMuffaloes'
-            Source    = Join-Path $psscriptroot 'source'
+            Build            = Join-Path -Path $psscriptroot -ChildPath 'build'
+            Generated        = $generatedPath = Join-Path -Path $psscriptroot -ChildPath 'generated\ResourceMuffaloes'
+            GeneratedVersion = Join-Path -Path $generatedPath -ChildPath $rwVersion.ShortVersion
+            Source           = $source = Join-Path -Path $psscriptroot -ChildPath 'source'
+            Template         = Join-Path -Path $source -ChildPath 'template'
+            About            = Join-Path -Path $source -ChildPath 'About\About.xml'
         }
         Data            = [PSCustomObject]@{
             Muffaloes = Get-Content (Join-Path $psscriptroot 'muffaloes.json') |
@@ -50,6 +54,34 @@ task Setup {
     $buildInfo.Version = [Version]$xDocument.Element('Manifest').Element('version').Value
 }
 
+task UpdateLastVersion {
+    $aboutXml = [System.Xml.Linq.XDocument]::Load($buildInfo.Path.About)
+    $supportedVersionsNode = $aboutXml.Element('ModMetaData').Element('supportedVersions')
+
+    $supportedVersions = $supportedVersionsNode.Elements('li').Value -as [Version[]] | Sort-Object
+
+    if ($buildInfo.RimWorldVersion.ShortVersion -notin $supportedVersions) {
+        $lastVersion = $supportedVersions[-1]
+        $path = Join-Path -Path $buildInfo.Path.Source -ChildPath $lastVersion
+
+        if (-not (Test-Path $path)) {
+            $contentToArchive = Join-Path -Path $buildInfo.Path.Generated -ChildPath $lastVersion
+
+            if (Test-Path $contentToArchive) {
+                Copy-Item -Path $contentToArchive -Destination $buildInfo.Path.Source -Recurse -Force
+            }
+        }
+
+        $supportedVersionsNode.Add(
+            [System.Xml.Linq.XElement]::new(
+                [System.Xml.Linq.XElement]::new([System.Xml.Linq.XName]'li', $buildInfo.RimWorldVersion.ShortVersion)
+            )
+        )
+
+        $aboutXml.Save($buildInfo.Path.About)
+    }
+}
+
 task Clean {
     if (Test-Path $buildInfo.Path.Build) {
         Remove-Item $buildInfo.Path.Build -Recurse
@@ -57,12 +89,13 @@ task Clean {
     if (Test-Path $buildInfo.Path.Generated) {
         Remove-Item $buildInfo.Path.Generated -Recurse
     }
-    $null = New-Item $buildInfo.Path.Build -ItemType Directory
-    $null = New-Item $buildInfo.Path.Generated -ItemType Directory
+    New-Item $buildInfo.Path.Build -ItemType Directory
+    New-Item $buildInfo.Path.GeneratedVersion -ItemType Directory
 }
 
 task CopyFramework {
-    Copy-Item ('{0}\*' -f $buildInfo.Path.Source) $buildInfo.Path.Generated -Recurse
+    Get-ChildItem -Path $buildInfo.Path.Source -Exclude template | Copy-Item -Destination $buildInfo.Path.Generated -Recurse
+    Join-Path -Path $buildInfo.Path.Source -ChildPath 'template\*' | Copy-Item -Destination $buildInfo.Path.GeneratedVersion -Recurse
 }
 
 task SetPublishedItemID {
@@ -72,7 +105,7 @@ task SetPublishedItemID {
 }
 
 task CreatePatches {
-    $path = Join-Path $buildInfo.Path.Generated 'Patches\template.xml'
+    $path = Join-Path $buildInfo.Path.GeneratedVersion 'Patches\template.xml'
 
     foreach ($colour in $buildInfo.Data.Muffaloes.Keys) {
         $muffalo = $buildInfo.Data.Muffaloes[$colour]
@@ -118,7 +151,7 @@ task UpdateLeatherThingDefs {
         }
 
         if ($muffalo.IsPatch) {
-            $path = Join-Path $buildInfo.Path.Generated ('Patches\{0}MuffaloPatch.xml' -f $colour)
+            $path = Join-Path $buildInfo.Path.GeneratedVersion ('Patches\{0}MuffaloPatch.xml' -f $colour)
 
             $def = Copy-RWModDef @commonParams @params
             $xDocument = [System.Xml.Linq.XDocument]::Load($path)
@@ -133,7 +166,7 @@ task UpdateLeatherThingDefs {
 
             $xDocument.Save($path)
         } else {
-            $path = Join-Path $buildInfo.Path.Generated 'Defs\ThingDefs\MuffaloLeather.xml'
+            $path = Join-Path $buildInfo.Path.GeneratedVersion 'Defs\ThingDefs\MuffaloLeather.xml'
 
             Copy-RWModDef @commonParams @params -SaveAs $path
         }
@@ -158,7 +191,7 @@ task UpdateAnimalThingDefs {
         }
 
         if ($muffalo.IsPatch) {
-            $path = Join-Path $buildInfo.Path.Generated ('Patches\{0}MuffaloPatch.xml' -f $colour)
+            $path = Join-Path $buildInfo.Path.GeneratedVersion ('Patches\{0}MuffaloPatch.xml' -f $colour)
 
             $def = Copy-RWModDef @commonParams @params
             $xDocument = [System.Xml.Linq.XDocument]::Load($path)
@@ -173,7 +206,7 @@ task UpdateAnimalThingDefs {
 
             $xDocument.Save($path)
         } else {
-            $path = Join-Path $buildInfo.Path.Generated 'Defs\ThingDefs\MuffaloAnimalThing.xml'
+            $path = Join-Path $buildInfo.Path.GeneratedVersion 'Defs\ThingDefs\MuffaloAnimalThing.xml'
 
             Copy-RWModDef @commonParams @params -SaveAs $path
         }
@@ -183,11 +216,19 @@ task UpdateAnimalThingDefs {
         $xDocument.Descendants('ThingDef').Where{
             $_.Element('defName').Value -eq ('{0}Muffalo' -f $colour)
         }.ForEach{
-            $_.Element('comps').Element('li').Where{ $_.Attribute('Class').Value -eq 'CompProperties_Milkable' }.ForEach{
+            $_.Element('comps').Elements('li').Where{ $_.Attribute('Class').Value -eq 'CompProperties_Milkable' }.ForEach{
+                $_.Element('milkDef').Value = '{0}{1}' -f @(
+                    $muffalo.DefNamePrefix
+                    $colour
+                )
                 $_.Element('milkAmount').Value = $muffalo.milkAmount
             }
-            $_.Element('comps').Element('li').Where{ $_.Attribute('Class').Value -eq 'CompProperties_Shearable' }.ForEach{
-                $_.Descendants('woolAmount').Value = $muffalo.woolAmount
+            $_.Element('comps').Elements('li').Where{ $_.Attribute('Class').Value -eq 'CompProperties_Shearable' }.ForEach{
+                $_.Element('woolDef').Value = '{0}{1}' -f @(
+                    $muffalo.DefNamePrefix
+                    $colour
+                )
+                $_.Element('woolAmount').Value = $muffalo.woolAmount
             }
         }
 
@@ -211,7 +252,7 @@ task UpdatePawnKindDefs {
         }
 
         if ($muffalo.IsPatch) {
-            $path = Join-Path $buildInfo.Path.Generated ('Patches\{0}MuffaloPatch.xml' -f $colour)
+            $path = Join-Path $buildInfo.Path.GeneratedVersion ('Patches\{0}MuffaloPatch.xml' -f $colour)
 
             $def = Copy-RWModDef @commonParams @params
             $xDocument = [System.Xml.Linq.XDocument]::Load($path)
@@ -226,7 +267,7 @@ task UpdatePawnKindDefs {
 
             $xDocument.Save($path)
         } else {
-            $path = Join-Path $buildInfo.Path.Generated 'Defs\ThingDefs\MuffaloPawnKind.xml'
+            $path = Join-Path $buildInfo.Path.GeneratedVersion 'Defs\ThingDefs\MuffaloPawnKind.xml'
 
             Copy-RWModDef @commonParams @params -SaveAs $path
         }
@@ -260,7 +301,7 @@ task UpdatePawnKindDefs {
 }
 
 task UpdateItemDefs {
-    $path = Join-Path $buildInfo.Path.Generated 'Defs\ThingDefs\MuffaloEgg.xml'
+    $path = Join-Path $buildInfo.Path.GeneratedVersion 'Defs\ThingDefs\MuffaloEgg.xml'
 
     $xDocument = [System.Xml.Linq.XDocument]::Load($path)
     $template = $xDocument.Root.Elements('ThingDef').Where( { $_.Element('defName').Value -eq 'Egg{0}MuffaloFertilized' } )[0]
@@ -285,7 +326,7 @@ task UpdateItemDefs {
         )
 
         if ($muffalo.IsPatch) {
-            $path = Join-Path $buildInfo.Path.Generated ('Patches\{0}MuffaloPatch.xml' -f $colour)
+            $path = Join-Path $buildInfo.Path.GeneratedVersion ('Patches\{0}MuffaloPatch.xml' -f $colour)
 
             $xDocument = [System.Xml.Linq.XDocument]::Load($path)
             $element = ([System.Xml.Linq.XElement[]]$xDocument.Element('Patch').
@@ -296,7 +337,7 @@ task UpdateItemDefs {
                 Element('value')
             $element.Add($item)
         } else {
-            $path = Join-Path $buildInfo.Path.Generated 'Defs\ThingDefs\MuffaloEgg.xml'
+            $path = Join-Path $buildInfo.Path.GeneratedVersion 'Defs\ThingDefs\MuffaloEgg.xml'
 
             $xDocument = [System.Xml.Linq.XDocument]::Load($path)
             $xDocument.Root.Add($item)
@@ -305,7 +346,7 @@ task UpdateItemDefs {
         $xDocument.Save($path)
     }
 
-    $path = Join-Path $buildInfo.Path.Generated 'Defs\ThingDefs\MuffaloEgg.xml'
+    $path = Join-Path $buildInfo.Path.GeneratedVersion 'Defs\ThingDefs\MuffaloEgg.xml'
     $xDocument = [System.Xml.Linq.XDocument]::Load($path)
     $xDocument.Root.Elements('ThingDef').Where( { $_.Element('defName').Value -eq 'Egg{0}MuffaloFertilized' } )[0].Remove()
     $xDocument.Save($path)

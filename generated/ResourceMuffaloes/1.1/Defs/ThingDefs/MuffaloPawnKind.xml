@@ -6,10 +6,7 @@
     <race>Muffalo</race>
     <combatPower>100</combatPower>
     <ecoSystemWeight>1.1</ecoSystemWeight>
-    <wildGroupSize>
-      <min>3</min>
-      <max>9</max>
-    </wildGroupSize>
+    <wildGroupSize>3~9</wildGroupSize>
     <lifeStages>
       <li>
         <label>Gold muffalo calf</label>
@@ -66,10 +63,7 @@
     <race>Muffalo</race>
     <combatPower>100</combatPower>
     <ecoSystemWeight>1.1</ecoSystemWeight>
-    <wildGroupSize>
-      <min>3</min>
-      <max>9</max>
-    </wildGroupSize>
+    <wildGroupSize>3~9</wildGroupSize>
     <lifeStages>
       <li>
         <label>Granite muffalo calf</label>
@@ -126,10 +120,7 @@
     <race>Muffalo</race>
     <combatPower>100</combatPower>
     <ecoSystemWeight>1.1</ecoSystemWeight>
-    <wildGroupSize>
-      <min>3</min>
-      <max>9</max>
-    </wildGroupSize>
+    <wildGroupSize>3~9</wildGroupSize>
     <lifeStages>
       <li>
         <label>Jade muffalo calf</label>
@@ -186,10 +177,7 @@
     <race>Muffalo</race>
     <combatPower>100</combatPower>
     <ecoSystemWeight>1.1</ecoSystemWeight>
-    <wildGroupSize>
-      <min>3</min>
-      <max>9</max>
-    </wildGroupSize>
+    <wildGroupSize>3~9</wildGroupSize>
     <lifeStages>
       <li>
         <label>Limestone muffalo calf</label>
@@ -246,10 +234,7 @@
     <race>Muffalo</race>
     <combatPower>100</combatPower>
     <ecoSystemWeight>1.1</ecoSystemWeight>
-    <wildGroupSize>
-      <min>3</min>
-      <max>9</max>
-    </wildGroupSize>
+    <wildGroupSize>3~9</wildGroupSize>
     <lifeStages>
       <li>
         <label>Marble muffalo calf</label>
@@ -306,10 +291,7 @@
     <race>Muffalo</race>
     <combatPower>100</combatPower>
     <ecoSystemWeight>1.1</ecoSystemWeight>
-    <wildGroupSize>
-      <min>3</min>
-      <max>9</max>
-    </wildGroupSize>
+    <wildGroupSize>3~9</wildGroupSize>
     <lifeStages>
       <li>
         <label>Plasteel muffalo calf</label>
@@ -366,10 +348,7 @@
     <race>Muffalo</race>
     <combatPower>100</combatPower>
     <ecoSystemWeight>1.1</ecoSystemWeight>
-    <wildGroupSize>
-      <min>3</min>
-      <max>9</max>
-    </wildGroupSize>
+    <wildGroupSize>3~9</wildGroupSize>
     <lifeStages>
       <li>
         <label>Sandstone muffalo calf</label>
@@ -426,10 +405,7 @@
     <race>Muffalo</race>
     <combatPower>100</combatPower>
     <ecoSystemWeight>1.1</ecoSystemWeight>
-    <wildGroupSize>
-      <min>3</min>
-      <max>9</max>
-    </wildGroupSize>
+    <wildGroupSize>3~9</wildGroupSize>
     <lifeStages>
       <li>
         <label>Silver muffalo calf</label>
@@ -486,10 +462,7 @@
     <race>Muffalo</race>
     <combatPower>100</combatPower>
     <ecoSystemWeight>1.1</ecoSystemWeight>
-    <wildGroupSize>
-      <min>3</min>
-      <max>9</max>
-    </wildGroupSize>
+    <wildGroupSize>3~9</wildGroupSize>
     <lifeStages>
       <li>
         <label>Slate muffalo calf</label>
@@ -546,10 +519,7 @@
     <race>Muffalo</race>
     <combatPower>100</combatPower>
     <ecoSystemWeight>1.1</ecoSystemWeight>
-    <wildGroupSize>
-      <min>3</min>
-      <max>9</max>
-    </wildGroupSize>
+    <wildGroupSize>3~9</wildGroupSize>
     <lifeStages>
       <li>
         <label>Steel muffalo calf</label>
@@ -606,10 +576,7 @@
     <race>Muffalo</race>
     <combatPower>100</combatPower>
     <ecoSystemWeight>1.1</ecoSystemWeight>
-    <wildGroupSize>
-      <min>3</min>
-      <max>9</max>
-    </wildGroupSize>
+    <wildGroupSize>3~9</wildGroupSize>
     <lifeStages>
       <li>
         <label>Uranium muffalo calf</label>

@@ -2,7 +2,7 @@
 <Patch>
   <Operation Class="PatchOperationConditional">
     <success>Always</success>
-    <xpath>Defs/ThingDef[defName="Tin"]</xpath>
+    <xpath>Defs/ThingDef[defName="Titanium"]</xpath>
     <match Class="PatchOperationSequence">
       <operations>
         <!-- Leather -->
@@ -10,11 +10,11 @@
           <xpath>/Defs</xpath>
           <value>
             <ThingDef ParentName="LeatherBase">
-              <defName>Leather_TinMuffaloFur</defName>
-              <label>tin muffalo fur</label>
-              <description>The furry pelt of a tin muffalo. This leather has been enriched with tin. Good at temperature regulation in cold climates.</description>
+              <defName>Leather_TitaniumMuffaloFur</defName>
+              <label>titanium muffalo fur</label>
+              <description>The furry pelt of a titanium muffalo. This leather has been enriched with titanium. Good at temperature regulation in cold climates.</description>
               <graphicData>
-                <color>(190,192,189)</color>
+                <color>(255,255,255)</color>
               </graphicData>
               <statBases>
                 <MarketValue>2.1</MarketValue>
@@ -27,8 +27,11 @@
                 <StuffPower_Armor_Heat>1.5</StuffPower_Armor_Heat>
               </statBases>
               <stuffProps>
-                <color>(190,192,189)</color>
+                <color>(255,255,255)</color>
                 <commonality>0.005</commonality>
+                <statFactors>
+                  <Beauty>1.3</Beauty>
+                </statFactors>
               </stuffProps>
             </ThingDef>
           </value>
@@ -38,15 +41,16 @@
           <xpath>/Defs</xpath>
           <value>
             <ThingDef ParentName="AnimalThingBase">
-              <defName>TinMuffalo</defName>
-              <label>tin muffalo</label>
-              <description>A large herding herbivore descended from buffalo and adapted for both cold and warm environments. While enraged muffalo are deadly, tamed muffalo are quite docile and can be used as pack animals.\n\nThis muffalo has been genetically engineered to absorb trace amounts of tin from the ground and water sources.</description>
+              <defName>TitaniumMuffalo</defName>
+              <label>titanium muffalo</label>
+              <description>A large herding herbivore descended from buffalo and adapted for both cold and warm environments. While enraged muffalo are deadly, tamed muffalo are quite docile and can be used as pack animals.\n\nThis muffalo has been genetically engineered to absorb trace amounts of titanium from the ground and water sources.</description>
               <statBases>
                 <MoveSpeed>4.5</MoveSpeed>
                 <MarketValue>300</MarketValue>
                 <ComfyTemperatureMin>-55</ComfyTemperatureMin>
                 <ComfyTemperatureMax>45</ComfyTemperatureMax>
               </statBases>
+              <uiIconScale>1.35</uiIconScale>
               <tools>
                 <li>
                   <label>head</label>
@@ -89,15 +93,10 @@
                 </li>
               </tools>
               <comps>
-                <li Class="CompProperties_Milkable">
-                  <milkDef>Milk</milkDef>
-                  <milkIntervalDays>2</milkIntervalDays>
-                  <milkAmount>5</milkAmount>
-                </li>
                 <li Class="CompProperties_Shearable">
-                  <woolDef>WoolMuffalo</woolDef>
+                  <woolDef>Titanium</woolDef>
                   <shearIntervalDays>25</shearIntervalDays>
-                  <woolAmount>100</woolAmount>
+                  <woolAmount>50</woolAmount>
                 </li>
               </comps>
               <race>
@@ -107,7 +106,7 @@
                 <baseHealthScale>1.75</baseHealthScale>
                 <baseHungerRate>0.85</baseHungerRate>
                 <foodType>VegetarianRoughAnimal</foodType>
-                <leatherDef>Leather_TinMuffaloFur</leatherDef>
+                <leatherDef>Leather_TitaniumMuffaloFur</leatherDef>
                 <gestationPeriodDays>28</gestationPeriodDays>
                 <wildness>0.6</wildness>
                 <trainability>Simple</trainability>
@@ -146,20 +145,17 @@
         <li Class="PatchOperationAdd">
           <xpath>/Defs</xpath>
           <value>
-            <PawnKindDef Name="TinMuffalo" ParentName="AnimalKindBase">
-              <defName>TinMuffalo</defName>
-              <label>tin muffalo</label>
+            <PawnKindDef Name="TitaniumMuffalo" ParentName="AnimalKindBase">
+              <defName>TitaniumMuffalo</defName>
+              <label>titanium muffalo</label>
               <race>Muffalo</race>
               <combatPower>100</combatPower>
               <ecoSystemWeight>1.1</ecoSystemWeight>
-              <wildGroupSize>
-                <min>3</min>
-                <max>9</max>
-              </wildGroupSize>
+              <wildGroupSize>3~9</wildGroupSize>
               <lifeStages>
                 <li>
-                  <label>Tin muffalo calf</label>
-                  <labelPlural>Tin muffalo calves</labelPlural>
+                  <label>Titanium muffalo calf</label>
+                  <labelPlural>Titanium muffalo calves</labelPlural>
                   <bodyGraphicData>
                     <texPath>Muffalo/Muffalo</texPath>
                     <drawSize>1.5</drawSize>
@@ -167,7 +163,7 @@
                       <volume>(0.4, 0.3, 0.3)</volume>
                       <offset>(0,0,-0.2)</offset>
                     </shadowData>
-                    <color>(190,192,189)</color>
+                    <color>(255,255,255)</color>
                   </bodyGraphicData>
                   <dessicatedBodyGraphicData>
                     <texPath>Things/Pawn/Animal/Muffalo/Dessicated_Muffalo</texPath>
@@ -182,7 +178,7 @@
                       <volume>(0.6, 0.45, 0.45)</volume>
                       <offset>(0,0,-0.25)</offset>
                     </shadowData>
-                    <color>(190,192,189)</color>
+                    <color>(255,255,255)</color>
                   </bodyGraphicData>
                   <dessicatedBodyGraphicData>
                     <texPath>Things/Pawn/Animal/Muffalo/Dessicated_Muffalo</texPath>
@@ -197,7 +193,7 @@
                       <volume>(0.8, 0.6, 0.6)</volume>
                       <offset>(0,0,-0.3)</offset>
                     </shadowData>
-                    <color>(190,192,189)</color>
+                    <color>(255,255,255)</color>
                   </bodyGraphicData>
                   <dessicatedBodyGraphicData>
                     <texPath>Things/Pawn/Animal/Muffalo/Dessicated_Muffalo</texPath>
@@ -213,22 +209,22 @@
           <xpath>/Defs</xpath>
           <value>
             <ThingDef ParentName="MuffaloEggBase">
-              <defName>EggTinMuffaloFertilized</defName>
-              <label>Tin muffalo egg (fert.)</label>
-              <description>An fertilized egg containing a tin breed of muffalo.</description>
+              <defName>EggTitaniumMuffaloFertilized</defName>
+              <label>Titanium muffalo egg (fert.)</label>
+              <description>An fertilized egg containing a titanium breed of muffalo.</description>
               <graphicData>
-                <color>(190,192,189)</color>
+                <color>(255,255,255)</color>
               </graphicData>
               <comps>
                 <li Class="CompProperties_Hatcher">
                   <hatcherDaystoHatch>1</hatcherDaystoHatch>
-                  <hatcherPawn>TinMuffalo</hatcherPawn>
+                  <hatcherPawn>TitaniumMuffalo</hatcherPawn>
                 </li>
               </comps>
               <costList>
                 <WoolMuffalo>100</WoolMuffalo>
                 <MedicineUltratech>5</MedicineUltratech>
-                <Tin>100</Tin>
+                <Titanium>100</Titanium>
               </costList>
             </ThingDef>
           </value>
